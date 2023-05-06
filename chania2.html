@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chania</title>
+		<style>
+			html{
+	font-family: "microsoft yahei,arial, helvetica, sans-serif";
+	font-size: 16px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li,ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.flex{
+	display: flex;
+}
+.auto{
+	margin: 0 auto;
+}
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.father {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.top {
+	height: 100px;
+	background-color: #808080;
+	overflow: hidden;
+}
+.top h1 {
+	color: #fff;
+	margin: 60px 0 0 20px;
+}
+.father .nav {
+	width: 100%;
+	height: 50px;
+	background-color: #333;
+}
+nav ul {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+nav ul li {
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+nav ul li a {
+	display: block;
+	color: #fff;
+}
+nav ul li:first-child a {
+	background-color: red;
+}
+.con {
+	width: 900px;
+	margin: 30px auto 45px;
+	display: flex;
+	justify-content: space-between;
+}
+.con ul {
+	width: 150px;
+}
+.con ul li {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 1em;
+	background-color: #5DB1E0;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.con div {
+	width: 77%;
+}
+.con div h1 {
+	font-size: 45px;
+	margin: 50px 0 40px 0;
+}
+.con div p {
+	font-size: 24px;
+	font-weight: bold;
+}
+footer {
+	height: 100px;
+	line-height: 100px;
+	text-indent: 1em;
+	background-color: #808080;
+	color: #fff;
+	font-size: 24px;
+}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<header>
+				<p>Chania</p>
+			</header>
+			<div class="banner">
+				<a href="">Home</a>
+				<a href="">News</a>
+				<a href="">Contact</a>
+				<a href="">About</a>
+			</div>
+			<main class="main">
+				<ul>
+					<li><a href="">The Flight
+
+
+
+</a></li>
+					<li><a href="">The City</a></li>
+					<li><a href="">The lsland</a></li>
+					<li><a href="">The Food</a></li>
+				</ul>
+				<div>
+					<h2>The City</h2>
+					<p>Chania is the capital of the Chania region on the<br>
+
+island of Crete</p>
+				</div>
+			</main>
+			<div style="clear: both;"></div>
+			<div class="ft">
+				Footer Text
+			</div>
+		</div>
+	</body>
+</html>
