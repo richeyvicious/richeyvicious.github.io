@@ -3,112 +3,107 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Chania</title>
-		<style>
+		<style type="text/css">
 			html{
-	font-family: "microsoft yahei,arial, helvetica, sans-serif";
-	font-size: 16px;
-}
-*{
-	margin: 0;
-	padding: 0;
-}
-li,ul,ol{
-	list-style: none;
-}
-a{
-	text-decoration: none;
-	color: #000;
-}
-.flex{
-	display: flex;
-}
-.auto{
-	margin: 0 auto;
-}
-.clearfix::after{
-	content: '';
-	display: block;
-	clear: both;
-}
-.father {
-	width: 1000px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.top {
-	height: 100px;
-	background-color: #808080;
-	overflow: hidden;
-}
-.top h1 {
-	color: #fff;
-	margin: 60px 0 0 20px;
-}
-.father .nav {
-	width: 100%;
-	height: 50px;
-	background-color: #333;
-}
-nav ul {
-	width: 100%;
-	height: 50px;
-	display: flex;
-	align-items: center;
-}
-nav ul li {
-	width: 110px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-}
-nav ul li a {
-	display: block;
-	color: #fff;
-}
-nav ul li:first-child a {
-	background-color: red;
-}
-.con {
-	width: 900px;
-	margin: 30px auto 45px;
-	display: flex;
-	justify-content: space-between;
-}
-.con ul {
-	width: 150px;
-}
-.con ul li {
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	text-indent: 1em;
-	background-color: #5DB1E0;
-	color: #fff;
-	font-size: 20px;
-	margin-bottom: 10px;
-}
-.con div {
-	width: 77%;
-}
-.con div h1 {
-	font-size: 45px;
-	margin: 50px 0 40px 0;
-}
-.con div p {
-	font-size: 24px;
-	font-weight: bold;
-}
-footer {
-	height: 100px;
-	line-height: 100px;
-	text-indent: 1em;
-	background-color: #808080;
-	color: #fff;
-	font-size: 24px;
-}
+				font-family: "microsoft yahei,arial, helvetica, sans-serif";
+				font-size: 16px;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li,ul,ol{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			.flex{
+				display: flex;
+			}
+			.auto{
+				margin: 0 auto;
+			}
+			.clearfix::after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.container {
+				width: 1100px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			header {
+				height: 120px;
+				background-color: #808080;
+				color: #fff;
+				overflow: hidden;
+			}
+			header p {
+				font-size: 38px;
+				font-weight: bold;
+				margin: 70px 0 0 20px; 
+			}
+			.banner {
+				height: 60px;
+				background-color: #333333;
+			}
+			.banner a {
+				display: block;
+				float: left;
+				width: 120px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				color: #fff;
+			}
+			.banner a:first-child {
+				background-color: red;
+			}
+			.main {
+				width: 1000px;
+				margin: 30px auto 50px;
+			}
+			.main ul {
+				width: 130px;
+				float: left;
+			}
+			.main ul li {
+				width: 100%;
+				height: 70px;
+				line-height: 70px;
+				text-align: center;
+				background-color: #5DB1E0;
+				margin-bottom: 15px;
+			}
+			.main ul li a {
+				font-size: 22px;
+				color: #fff;
+				
+			}
+			.main div {
+				width: 83%;
+				float: right;
+			}
+			.main div h2 {
+				font-size: 45px;
+				margin: 80px 0 40px;
+			}
+			.main div p {
+				font-size: 26px;
+			}
+			.ft {
+				height: 120px;
+				background-color: #808080;
+				color: #fff;
+				line-height: 120px;
+				text-indent: 1em;
+				font-size: 28px;
+			}
 		</style>
 	</head>
-	
 	<body>
 		<div class="container">
 			<header>
