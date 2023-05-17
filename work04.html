@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+        body{
+            background-image: url(fengjing.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .header li ul li{
+            display: none;
+            
+        }
+        .header li:hover ul li{
+            display: block;
+        }
+        .mg{
+            float: left;
+            margin-left: 10px;
+        }
+        .mg img{
+            width:100px;
+        }
+        .counter{
+           
+            
+        }
+        .counter li{
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 50px;
+            margin-top: 17px;
+            
+        }
+        .counter li a{
+            text-decoration: none;
+            color: black;
+        }
+        .counter li a:hover{
+            color: rgb(132, 133, 133);
+        }
+       .more{
+        position: relative;
+       }
+        .extra{
+            position: absolute;
+            background-color: rgb(240, 241, 245);
+            border-radius: 10px;
+        }
+        .extra li{
+               
+               margin-top: 20px;
+               margin-left: 0px;
+               padding-right:40px;
+               padding-left: 10px;
+               padding-bottom: 10px;
+        }
+       
+     
+        .box{
+            top: 40%;
+            left: 40%;
+            position: absolute;
+            transform: translate(-50% -50%);
+            height: 30px;
+            padding: 10px;
+        }
+        .sc{
+            border: none;
+            width:0;
+            margin: 0;
+           transition: 0.4s;
+            border-radius: 20px;
+            outline: none;
+            border-color: rgb(238, 241, 243);
+            transition: width 0.4s ease-in-out;
+            padding: 5px 32px;
+            text-align: left;
+            background-image:url(southeast.jpg);
+            background-position-x: left;
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+        .button{
+            float: left;
+            width: 20px;
+            height: 30px;
+            border-radius: 20px;
+         
+            
+            transition: 0.4s;
+        }
+        .box:hover .sc{
+            width:200%;
+          
+        }
+        .submit{
+            top: 45%;
+            left: 45%;
+           border-radius: 10px;
+           padding:6px 19px;
+           font-size:16px;
+           border: 1px solid grey;
+           color: grey;
+          margin-top:10px;
+          display: block;
+         position: fixed;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="mg"><img src="微信图片_20230511202546.png"></div>
+            <div class="counter">
+                <ul>
+                    <li><a href="#">picture</a></li>
+                    <li><a href="#">video</a></li>
+                    <li><div class="more"><a href="#">more</a>
+                        <ul class="extra">
+                            <li><a href="#">map</a></li>
+                            <li><a href="#">news</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+            <div class="box">
+            <input type="search" class="sc" name="q">
+            <a class="button"></a>
+            </div>
+            <input type="submit" value="search" class="submit">
+       
+    </body>
+</html>
