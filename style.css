@@ -1,102 +1,174 @@
-html{
-	font-family: "microsoft yahei,arial, helvetica, sans-serif";
-	font-size: 16px;
-}
 *{
-	margin: 0;
-	padding: 0;
+box-sizing: border-box;
 }
-li,ul,ol{
-	list-style: none;
+#main{
+    display: flex;
+}
+#wrapper{
+    position: relative;
 }
 a{
-	text-decoration: none;
-	color: #000;
+    text-decoration: none;
+    color: rgb(236, 190, 130);
 }
-.flex{
-	display: flex;
+ul,li{
+    list-style-type: none;
 }
-.auto{
-	margin: 0 auto;
+#header{
+    background-color: antiquewhite;
+    margin:0;
+    padding: 25px;
 }
-.clearfix::after{
-	content: '';
-	display: block;
-	clear: both;
+.icons{
+   width: 600px;
+   float: right;
+   text-align: center;
+  
+
 }
-.father {
-	width: 1000px;
-	margin: 0 auto;
-	overflow: hidden;
+.icons li{
+    display:inline-block;
+    position: relative;
+    bottom: 33px;
+    margin: 20px;
 }
-.top {
-	height: 100px;
-	background-color: #808080;
-	overflow: hidden;
+
+#banner{
+    margin-left: 400px;
+    background-color: antiquewhite;
+    position: relative;
+    text-align: left;
+    width: 1000px;
+    border-bottom: 2px;
+    border-color: antiquewhite;
 }
-.top h1 {
-	color: #fff;
-	margin: 60px 0 0 20px;
+
+#banner h1{
+    margin-left:30px; 
 }
-.father .nav {
-	width: 100%;
-	height: 50px;
-	background-color: #333;
+#banner p{
+    width: 600px;
+    margin-left: 30px;
 }
-nav ul {
-	width: 100%;
-	height: 50px;
-	display: flex;
-	align-items: center;
+#banner img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    right: 60px;
 }
-nav ul li {
-	width: 110px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
+.major:first-child{
+
+    padding: 0;
+    margin-left: 400px;
 }
-nav ul li a {
-	display: block;
-	color: #fff;
+.features{
+    margin-left:400px;
+    margin-bottom: 0;
+    padding: 0;
 }
-nav ul li:first-child a {
-	background-color: red;
+.content:nth-child(2){
+    width: 50%;
+    float: left;
+    margin: 0;
+    border-color: azure;
+    border-style: double;
+border: 1px;
 }
-.con {
-	width: 900px;
-	margin: 30px auto 45px;
-	display: flex;
-	justify-content: space-between;
+.posts{
+    margin-left: 400px;
 }
-.con ul {
-	width: 150px;
+.posts article{
+    text-align: left;
+    float: left;
+    width: 50%;
+    border-radius: 10px;
+    border-color: bisque;
+    border-style: dashed;
+    border-collapse: collapse;
 }
-.con ul li {
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	text-indent: 1em;
-	background-color: #5DB1E0;
-	color: #fff;
-	font-size: 20px;
-	margin-bottom: 10px;
+.posts img{
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 30px;
+    right: 300px;
 }
-.con div {
-	width: 77%;
+.posts h3{
+    padding-right: 50px;
+    position:relative;
+    bottom: 50px;
 }
-.con div h1 {
-	font-size: 45px;
-	margin: 50px 0 40px 0;
+.posts p{
+    
+    width: 300px;
+    position: relative;
+    bottom: 20px;
 }
-.con div p {
-	font-size: 24px;
-	font-weight: bold;
+.posts li a{
+    color: black;
+    position: relative;
+    bottom:50px ;
+    left: 300px;
 }
-footer {
-	height: 100px;
-	line-height: 100px;
-	text-indent: 1em;
-	background-color: #808080;
-	color: #fff;
-	font-size: 24px;
+#sidebar{
+    float: left;
+    position: relative;
+    top:30px;
 }
+#sidebar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: rgb(235, 217, 194);
+    position: absolute;
+    top: 90px;
+    left: 1px;
+    width: 390px;
+    height: 100%;
+    overflow: auto;
+}
+#query{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    position: relative;
+    left:20px;
+}
+#menu ul{
+    position: relative;
+    right: 30px;
+}
+#menu ul li{
+    padding: 30px;
+}
+#menu a{
+    color: black;
+}
+.contact li{
+    position: relative;
+    bottom: 100px;
+}
+#sidebar p{
+    position: relative;
+    left: 40px;
+    bottom: 100px;
+     width: 300px;
+}
+#banner .button{
+    position: relative;
+    left: 175px;
+    bottom: 38px;
+    color: rgb(182, 171, 171);
+}
+.inner 
+
+
+
+
+
+
