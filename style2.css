@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+}
+#main{
+    display: flex;
+}
+#wrapper{
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: rgb(235, 136, 155);
+}
+ul,li{
+    list-style-type: none;
+}
+img{
+    width: 300px;
+    height: auto;
+}
+.logo{
+    float: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.icons{
+    background-color: rgb(218, 206, 236);
+    text-align: center;
+    width: 75%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.icons li{
+    display: inline-block;
+    position: relative;
+    right: 30px;
+}
+.icons li a{
+    margin: 30px;
+}
+#sidebar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+   
+    position: absolute;
+    top: 15px;
+    right:0%;
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+}
+#search{
+    background-color: rgb(218,206,236);
+    width: 390px;
+   height: 80px;
+}
+#query{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+    position: relative;
+    left:20px;
+    top: 20px;
+}
+#menu h2{
+    text-align:center;
+}
+#menu ul{
+    position: relative;
+    right: 30px;
+    top: 5px;
+}
+#menu ul li{
+    padding: 30px;
+}
+#menu a{
+    color: black;
+}
+.contact li{
+    position: relative;
+    top:0px;
+}
+#sidebar p{
+    position: relative;
+    left:40px;
+    top: 20px;
+     width: 200px;
+}
+#sidebar{
+    background-color:rgb(218,206,236);
+  
+}
+#banner .button{
+    position: relative;
+    left: 175px;
+    bottom: 38px;
+    color: rgb(182, 171, 171);
+}
+.contact{
+    position: relative;
+    top: 30px;
+}
+#footer{
+    position: relative;
+    top: 30px;
+}
+#banner{
+    margin-right: 100px;
+    background-color: rgb(218,206,236);
+    position: relative;
+    text-align: left;
+    width:75%;
+}
+#banner img{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+}
+#banner h1{
+    margin-left:30px; 
+}
+#banner p{
+    width: 600px;
+    margin-left: 30px;
+}
+#banner .button{
+    position: relative;
+    right:200px;
+}
+.posts{
+    margin-right: 400px;
+    padding: 10px;
+}
+.posts article{
+    text-align: right;
+    float: left;
+    width: 50%;
+    border-radius: 10px;
+    border-color: bisque;
+    border-style: dashed;
+    border-collapse: collapse;
+}
+.posts img{
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 30px;
+    left: -150px;
+}
+.posts h3{
+    padding-left: 50px;
+    position:relative;
+    right: 450px;
+    bottom: 50px;
+}
+.posts p{
+    width: 400px;
+    position: relative;
+    bottom: -20px;
+}
+.posts li a{
+    color: rgb(200, 174, 241);
+    position: relative;
+    bottom:50px ;
+    left: 300px;
+}
+.actions li{
+    position: relative;
+    right: 350px;
+    top: 35px;
+    
+}
+.features article{
+    margin-right:400px;
+    margin-bottom: 0;
+    padding: 0;
+    border:5px dotted pink ;
+    border-radius: 5px;
+    background-color: rgb(200, 174, 241);
+    border-collapse: collapse;
+    width:75%;
+}
+#main .major{
+    border: 1px;
+}
+
+
