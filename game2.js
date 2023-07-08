@@ -7,43 +7,71 @@ document.addEventListener("DOMContentLoaded", function() {
   let score = 0;
   let obstacleSpeed = 10;
   let obstacleInterval;
-
+  let jumpCount = 0;
+  let jumpHeight = 0; // 将jumpHeight定义为全局变量
+  let jumpSpeed = 5; // 将jumpSpeed定义为全局变量
+  let targetHeight = 200;
+  let jumpAgain = false;
+  let obstacleFrequency = 7000; 
+  
   function startGame() {
       document.addEventListener("keydown", jump);
       gameIsOver = false;
       score = 0;
       obstacleSpeed = 5;
       createObstacle();
-      setTimeout(createObstacle, Math.random() * 4000 + 3000);
+      setTimeout(createObstacle, Math.random() * obstacleFrequency + 3000);
   }
 
-  function jump(event) {
-      if (event.code === "Space" && !isJumping && !gameIsOver) {
-          isJumping = true;
-          let jumpHeight = 0; // 设置初始跳跃高度为0
-          let jumpSpeed = 5; // 设置跳跃速度
+  function increaseObstacleSpeed() {
+    if (score % 50 === 0) { // 每10秒（得分增加50分）增加障碍物速度
+      obstacleSpeed += 0.2;
+      obstacleFrequency -= 200; // 每10秒（得分增加50分）减少障碍物出现频率
+    }
+  }
   
+  function jump(event) {
+    if (event.code === "Space" && jumpCount < 2 && !gameIsOver) {
+      isJumping = true;
+      jumpCount++;
+      let jumpSpeed = 5; 
+      let isCloseInterval = false;
 
-          let upInterval = setInterval(function() {
-              if (jumpHeight <=200) {
-                  ball.style.bottom = jumpHeight + "px";
-                  jumpHeight += jumpSpeed;
-              } else {
-                  clearInterval(upInterval);
-
-                  let downInterval = setInterval(function() {
-                      if (jumpHeight > 0) {
-                          ball.style.bottom = jumpHeight + "px";
-                          jumpHeight -= jumpSpeed;
-                      } else {
-                          clearInterval(downInterval);
-                          isJumping = false;
-                      }
-                  }, 10);
-              }
-          }, 10);
+      if(jumpHeight > 0){
+        targetHeight += jumpHeight; 
+        jumpAgain = true; 
+        isCloseInterval = true; 
       }
+      var upInterval = setInterval(function() {
+        if (jumpHeight < targetHeight) {
+          ball.style.bottom = jumpHeight + "px";
+          jumpHeight += jumpSpeed;
+        } else {
+          if(jumpHeight === targetHeight){
+            jumpAgain = false;
+          }
+          var downInterval = setInterval(function() {
+            if (jumpHeight > 0) {
+                if(jumpAgain)clearInterval(downInterval);
+                ball.style.bottom = jumpHeight + "px";
+                jumpHeight -= jumpSpeed;
+            } else {
+                clearInterval(upInterval);
+                clearInterval(downInterval);
+                isJumping = false;
+                jumpCount = 0; 
+                targetHeight = 200; 
+                jumpAgain = false; 
+            }
+          }, 10);
+        }
+      }, 10);
+      if(isCloseInterval){
+        clearInterval(upInterval);
+      }
+    }
   }
+
 
   function createObstacle() {
     if (!gameIsOver) {
@@ -61,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
               gameOver();
               clearInterval(obstacleInterval);
             }
-    
-            if (parseInt(obstacle.style.left) < -50) {
+            
+            if (parseInt(obstacle.style.left) < 0) {
               obstacle.remove();
               increaseScore();
               increaseObstacleSpeed();
@@ -74,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }, 10);
       }
+      setTimeout(createObstacle, Math.random() * obstacleFrequency + 3000);
     }
 
   function checkCollision(obstacle) {
